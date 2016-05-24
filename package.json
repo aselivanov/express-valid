@@ -6,8 +6,12 @@
   "author": "Aleks Selivanov <aleks.selivanov@yahoo.com>",
   "license": "MIT",
   "dependencies": {
-    "dot-object": "^1.4.1"
+    "dot-object": "~1.4.1"
   },
+  "files": [
+    "LICENSE",
+    "valid.js"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aselivanov/express-valid.git"
