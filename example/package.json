@@ -1,0 +1,13 @@
+{
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "express-valid": "../",
+    "mongoose": "^4.4.19",
+    "validator": "^5.2.0"
+  }
+}
