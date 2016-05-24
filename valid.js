@@ -23,13 +23,9 @@ module.exports = function valid(options) {
       return res.error(null, message, code);
     }
 
-    req.valid = function valid(then) {
+    req.valid = function valid() {
       if (Object.keys(errors).length === 0) {
-        if (typeof then === 'function') {
-          return Promise.resolve().then(then);
-        } else {
-          return Promise.resolve(then);
-        }
+        return Promise.resolve();
       } else {
         dot.object(errors);
         options.otherwise(req, req.res, errors);
