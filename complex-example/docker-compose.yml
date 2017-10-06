@@ -1,0 +1,29 @@
+version: '2'
+services:
+  mongo: 
+    image: mongo:2.6
+    volumes:
+      - ./.dev/mongo:/data/db
+  api:
+    image: node:6
+    working_dir: /src
+    volumes:
+      - ./api:/src
+      - ..:/src/node_modules/express-valid
+    # cache
+      - ./.dev/npm:/root/.npm
+    links:
+      - mongo
+    ports:
+      - 8000:8000
+      - 9229:9229 # node --inspect
+    command: npm run dev
+  web:
+    image: node:6
+    working_dir: /src
+    volumes:
+      - ./web:/src
+      - ./.dev/npm:/root/.npm
+    ports:
+      - 80:80
+    command: bash -c "npm install && npm run dev"

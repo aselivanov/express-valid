@@ -1,0 +1,54 @@
+<form name="profile" novalidate>
+    <div class="form-group">
+        <label>Full name</label>
+        <input 
+            ng-model="data.fullName" name="fullName"
+            type="text"
+        />
+    </div>
+
+    <fieldset>
+        <legend>Experience</legend>
+
+        <button 
+            ng-click="data.experiences.push({})"
+            class="add-button"
+        >+</button>
+
+        <div ng-form="experiences" class="experiences">
+            <div 
+                ng-repeat="e in data.experiences" 
+                ng-form="{{$index}}" 
+                class="experience"
+            >
+                
+                <div class="form-group">
+                    <label>Company</label>
+                    <input
+                        ng-model="e.company" name="company" required
+                        type="text"
+                    />
+                    <!--<div ng-if="experiences[$index].company.$error.required">Required.</div>-->
+                </div>
+
+                <div class="form-group">
+                    <label>Years</label>
+                    <input 
+                        ng-model="e.years.from" required
+                        type="number" min="1900" max="2020" 
+                    />
+                    &ndash;
+                    <input 
+                        ng-model="e.years.to" required
+                        type="number" min="1900" max="2020"
+                    />
+                </div>
+
+                <button 
+                    ng-click="data.experiences.splice($index, 1)"
+                    class="remove-button"
+                >-</button>
+            </div>
+        </div>
+    </fieldset>
+</form>

@@ -1,0 +1,22 @@
+<!doctype html>
+<html ng-app="example">
+    <head>
+        <meta charset="UTF-8" />
+        <base href="/" />
+        <title>Example</title>
+
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
+
+        <script src="example.js"></script>
+        <link rel="stylesheet" href="styles.css" />
+
+        <script>
+            angular.module('example').constant('API_URL', 'http://localhost:8000/');
+        </script>
+    </head>
+    <body ng-controller="AppController as app">
+        <div ng-view class="container"></div>
+    </body>
+</html>

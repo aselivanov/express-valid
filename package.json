@@ -2,22 +2,17 @@
   "name": "express-valid",
   "version": "0.1.0",
   "description": "Validation middleware for Express",
-  "main": "valid.js",
+  "main": "index.js",
   "author": "Aleks Selivanov <aleks.selivanov@yahoo.com>",
   "license": "MIT",
-  "dependencies": {
-    "dot-object": "~1.4.1"
-  },
   "files": [
-    "LICENSE",
-    "valid.js"
+    "index.js",
+    "README.md",
+    "LICENSE"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/aselivanov/express-valid.git"
-  },
-  "bugs": {
-    "url": "https://github.com/aselivanov/express-valid/issues"
-  },
-  "homepage": "https://github.com/aselivanov/express-valid#readme"
+  "repository": "aselivanov/express-valid",
+  "devDependencies": {
+    "body-shaper": "^0.2.1",
+    "tape": "^4.8.0"
+  }
 }

@@ -1,13 +1,17 @@
 {
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "dependencies": {
-    "body-parser": "^1.15.1",
-    "express": "^4.13.4",
-    "express-valid": "../",
-    "mongoose": "^4.4.19",
-    "validator": "^5.2.0"
+    "body-parser": "1.15.1",
+    "body-shaper": "0.1.1",
+    "express": "4.13.4",
+    "express-valid": "file:..",
+    "is-empty": "^1.2.0",
+    "isemail": "^2.2.1",
+    "lodash": "4.17.4",
+    "lowdb": "^1.0.0",
+    "object-path": "^0.11.4"
   }
 }
